@@ -1,14 +1,14 @@
 <h1 align="center">web-push</h1>
 
 <p align="center">
-  <a href="https://travis-ci.org/web-push-libs/web-push">
-    <img src="https://travis-ci.org/web-push-libs/web-push.svg?branch=master" alt="Travis Build Status" />
+  <a href="https://travis-ci.org/smartprix/web-push">
+    <img src="https://travis-ci.org/smartprix/web-push.svg?branch=master" alt="Travis Build Status" />
   </a>
-  <a href="https://david-dm.org/web-push-libs/web-push">
-    <img src="https://david-dm.org/web-push-libs/web-push.svg" alt="NPM Dependency State" />
+  <a href="https://david-dm.org/smartprix/web-push">
+    <img src="https://david-dm.org/smartprix/web-push.svg" alt="NPM Dependency State" />
   </a>
-  <a href="https://david-dm.org/web-push-libs/web-push?type=dev">
-    <img src="https://david-dm.org/web-push-libs/web-push/dev-status.svg" alt="NPM Dev Dependency State" />
+  <a href="https://david-dm.org/smartprix/web-push?type=dev">
+    <img src="https://david-dm.org/smartprix/web-push/dev-status.svg" alt="NPM Dev Dependency State" />
   </a>
 </p>
 
@@ -176,8 +176,9 @@ any of the following values defined, although none of them are required.
 
 - **gcmAPIKey** can be a GCM API key to be used for this request and this
 request only. This overrides any API key set via `setGCMAPIKey()`.
-- **vapidDetails** should be an object with *subject*, *publicKey* and
-*privateKey* values defined. These values should follow the [VAPID Spec](https://tools.ietf.org/html/draft-thomson-webpush-vapid).
+- **vapidDetails** should be a falsy value(when you do not want to use vapid headers for FCM endpoints) or 
+an object with *subject*, *publicKey* and *privateKey* values defined.
+These values should follow the [VAPID Spec](https://tools.ietf.org/html/draft-thomson-webpush-vapid).
 - **TTL** is a value in seconds that describes how long a push message is
 retained by the push service (by default, four weeks).
 - **headers** is an object with all the extra headers you want to add to the request.
